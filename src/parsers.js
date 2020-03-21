@@ -1,6 +1,6 @@
 const cheerio = require("cheerio");
 
-const campinasParser = (html) => {
+const campinasSPParser = (html) => {
   const $ = cheerio.load(html)
 
   const fields = ['negative', 'suspected', 'confirmed']
@@ -29,6 +29,6 @@ const araraquaraSPParser = (html) => {
 }
 
 module.exports = {
-  campinasParser,
+  campinasSPParser,
   araraquaraSPParser
 }
