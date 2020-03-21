@@ -12,7 +12,7 @@ async function ScrapperWrapper(url, parser) {
     const data = await parser(html)
 
     if (!(typeof data === 'object' && data.suspected && data.confirmed && data.negative)) {
-      throw new Error('Invalid format!')
+      throw new Error(`Invalid format! ${JSON.stringify(data)}`)
     }
 
     return data
