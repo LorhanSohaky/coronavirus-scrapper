@@ -7,7 +7,7 @@ const campinasParser = (html) => {
   const obj = {}
 
   $('.numero').each(function (i) {
-    obj[fields[i]] = $(this).children('span').text();
+    obj[fields[i]] = Number($(this).children('span').text());
   })
 
   return obj
