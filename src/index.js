@@ -8,6 +8,7 @@ const counties = [
 
 const listCounties = () => Promise.all(
   counties.map(({ ibge_code, name, url, parser }) => wrapper(url, parser)
+    .catch(err => { throw new Error(`${name} (${ibge_code}) - ${err.message}`) })
     .then(data => ({ ibge_code, name, ...data }))))
 
 

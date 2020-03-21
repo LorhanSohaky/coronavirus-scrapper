@@ -11,8 +11,8 @@ async function ScrapperWrapper(url, parser) {
   async function parseData(html) {
     const data = await parser(html)
 
-    if (!(typeof data === 'object' && data.suspected && data.confirmed && data.negative)) {
-      throw new Error(`Invalid format! ${JSON.stringify(data)}`)
+    if (!(typeof data === 'object' && typeof data.suspected === "number" && typeof data.confirmed === "number" && typeof data.negative === "number")) {
+      throw new Error(`Invalid format!\n${JSON.stringify(data)}`)
     }
 
     return data
