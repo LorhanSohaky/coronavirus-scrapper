@@ -1,0 +1,21 @@
+{
+  "name": "coronavirus-scrapping",
+  "version": "1.0.0",
+  "description": "Pacote para pegar os dados divulgados pelas prefeituras do Brasil sobre o Coronavirus",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "coronavirus",
+    "brasil",
+    "scrapping"
+  ],
+  "author": "Lorhan Sohaky",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "node-fetch": "^2.6.0"
+  }
+}
