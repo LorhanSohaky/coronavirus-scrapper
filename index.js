@@ -1,5 +1,11 @@
+const { router, get } = require("microrouter");
+const { json, send } = require("micro");
+
 const listCounties = require("./src/index");
 
-listCounties()
-  .then(list => console.log(list))
-  .catch(err => console.error(err))
+routeListCounties = (req, res) => listCounties()
+  .then(list => list)
+
+module.exports = router(
+  get('/', routeListCounties)
+)
