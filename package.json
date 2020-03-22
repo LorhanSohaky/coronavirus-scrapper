@@ -4,8 +4,7 @@
   "description": "Pacote para pegar os dados divulgados pelas prefeituras do Brasil sobre o Coronavirus",
   "main": "index.js",
   "scripts": {
-    "dev": "micro-dev -p 8000",
-    "start": "micro index.js",
+    "dev": "micro-dev api/index.js -p 8000",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -16,11 +15,11 @@
   "author": "Lorhan Sohaky",
   "license": "MIT",
   "dependencies": {
+    "@now/node": "^1.4.1",
     "cheerio": "^1.0.0-rc.3",
     "micro": "^9.3.4",
     "micro-dev": "^3.0.0",
     "microrouter": "^3.1.3",
-    "node-fetch": "^2.6.0",
-    "now-micro": "^0.4.0"
+    "node-fetch": "^2.6.0"
   }
 }
